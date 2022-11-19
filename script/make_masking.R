@@ -49,22 +49,3 @@ c("Maize", "Wheat", "Rice") %>%
 
     writeRaster(all, str_c("data/outputs/masks/mask_", acrop, ".tif"), overwrite = T)
   })
-
-# make a unified 1km mask for extraction  --------------------------------
-
-temp_1km <- rast(resolution = 0.01) %>%
-  crop(rast("data/outputs/masks/mask_extraction.tif"), snap = "out")
-
-all <-
-  list.files("../data_archive/China_1km_majorcrop_area", full.names = T) %>%
-  map(rast) %>%
-  pro_map(~ extend(.x, exts)) %>%
-  rast() %>%
-  tapp(rep(c("Maize", "Rice", "Wheat"), each = 20), "sum", na.rm = T)
-
-all[all > 0] <- 1
-all[all == 0] <- NA
-
-all <- project(all, temp_1km, method = "near")
-
-writeRaster(all, "data/outputs/masks/mask_extraction_1km.tif", overwrite = TRUE)
