@@ -21,7 +21,9 @@ The prefixes `results_` are for generating and plotting the results in Main text
 More details in data folds:
 
 The data in data/. are outputs from `results_` scripts.
+
 The data in data/outputs are outputs from `cal_` scripts.
+
 The data in data/inputs are source data acquired from different sources. Note that due to different data policy, the source data should be download by oneself.
 
 Note that the data fold does not contains due to its large volume. You can contact the authors for them, if you want.
