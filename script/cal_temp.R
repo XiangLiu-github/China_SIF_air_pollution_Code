@@ -49,26 +49,3 @@ check_join(tmax)
 
 saveRDS(tmax, "data/outputs/temp/tmax.rds")
 
-# 1 km --------------------------------------------------------------------
-
-mask <- rast("data/outputs/masks/mask_extraction_1km.tif") %>%
-  sum(na.rm = T) %>%
-  raster()
-
-tmax <-
-  stack("../data_archive/China_1km_climate/China_1km_maxtmp_monmean.nc")
-
-walk(2000:2019, function(ayear) {
-  tmax[[names(tmax)[year(ymd(str_remove(names(tmax), "X"))) == ayear]]] %>%
-    resample(mask) %>%
-    mask(mask) %>%
-    as.data.frame(xy = T) %>%
-    drop_na() %>%
-    pivot_longer(-c(x, y),
-      names_to = "Date", names_prefix = "X",
-      names_transform = list(Date = ymd),
-      values_to = "tmax"
-    ) %>%
-    mutate(year = year(Date), month = month(Date), .keep = "unused") %>%
-    qsave(str_c("data/outputs/temp/tmax_1km_", ayear, ".qs"), nthreads = 3)
-})
