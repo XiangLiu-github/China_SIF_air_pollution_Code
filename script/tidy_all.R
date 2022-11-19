@@ -85,7 +85,6 @@ AOD <- read_rds("data/outputs/aerosol/AOD.rds") # 2000-2020
 PM25 <- read_rds("data/outputs/aerosol/PM25.rds") # 2000-2020
 PM10 <- read_rds("data/outputs/aerosol/PM10.rds") # 2000-2020
 ozone <- read_rds("data/outputs/ozone/tidied.rds") # 2005-2019
-no2 <- read_rds("data/outputs/no2/tidied.rds") # 2005-2019
 irrigation <- read_rds("data/outputs/irrigation/tidied.rds") # %>% # 2000-2019
 # bind_rows((.) %>% filter(year == 2019) %>% mutate(year = 2020))
 radiation <- read_rds("data/outputs/radiation/tidied.rds") # 2007-2018
@@ -107,7 +106,6 @@ data <-
   left_join(AOD) %>%
   left_join(PM25) %>%
   left_join(PM10) %>%
-  left_join(no2) %>% 
   left_join(radiation)
 
 shp_file <-
@@ -164,7 +162,7 @@ fnl_data <-
       GOSIF, Wenetal, RTSIF, CSIF
     ), sum, .names = "{.col}_sum"),
     across(c(
-      maxtmp, cloud, AOD, PM25, PM10, NO2,
+      maxtmp, cloud, AOD, PM25, PM10, 
       HE, MA, `GR&EM`,
       GOSIF, Wenetal, RTSIF, CSIF,
       fraction, DR, GR, surface, root
