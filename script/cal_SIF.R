@@ -66,38 +66,6 @@ GOSIF <- GOSIF %>%
 saveRDS(GOSIF, "data/outputs/SIF/GOSIF_8day.rds")
 
 ############################################
-#
-
-Wenetal <-
-  tibble(
-    files_ = list.files("../data_archive/Global_5km_SIF/Wenetal_monthly/"),
-    files = list.files("../data_archive/Global_5km_SIF/Wenetal_monthly/", full.names = T)
-  ) %>%
-  separate(files_, c(NA, "date", NA), sep = "_|\\.") %>%
-  mutate(date = ym(date)) %>%
-  mutate(year = year(date), month = month(date), .keep = "unused") %>%
-  mutate(data = pro_map2(files, year, function(afile, ayear) {
-    temp <- rast(afile)[["SIF_740_daily_corr"]][]
-
-    rast(resolution = c(0.05, 0.05)) %>%
-      terra::`values<-`(temp) %>%
-      resample(mask, method = "near") %>%
-      mask(mask) %>%
-      `names<-`("Wenetal") %>%
-      as.data.frame(xy = T)
-  })) %>%
-  select(-files)
-
-Wenetal <-
-  Wenetal %>%
-  unnest() %>%
-  trim_xy()
-
-check_join(Wenetal)
-
-saveRDS(Wenetal, "data/outputs/SIF/Wenetal.rds")
-
-############################################
 # mW m−2 nm−1 sr−1
 
 RTSIF <-
