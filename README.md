@@ -1,10 +1,10 @@
 # China_SIF_air_pollution_Code
 
-This the replication code for paper entitled 'Satellite-based assessment of strengthening China's food security through air quality improvements'.
+This is the replication code for paper entitled 'Strengthened China's food security through air quality improvements'.
 
 This directory has three folds:
 
-1. data, which stores the processed and original source data.
+1. data, which stores the processed and original source data (not shown here because it is empty).
 2. figures, which stores the plotted figures from R scripts, but in their specific name.
 3. figures_paper, which stores the figures with indexed name.
 4. script, which contains the source R code to replicate the results, including processing, preparing, generating results. 
@@ -21,9 +21,7 @@ The prefixes `results_` are for generating and plotting the results in Main text
 More details in data folds:
 
 The data in data/. are outputs from `results_` scripts.
-
 The data in data/outputs are outputs from `cal_` scripts.
-
 The data in data/inputs are source data acquired from different sources. Note that due to different data policy, the source data should be download by oneself.
 
-Note that the data fold does not contains due to its large volume. You can contact the authors for them, if you want.
+Note that the data fold does not contains due to its large volume. You can contact the authors for acquiring them, if you want.
