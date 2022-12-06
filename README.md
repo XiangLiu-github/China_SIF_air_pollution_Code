@@ -1,5 +1,3 @@
-# China_SIF_air_pollution_Code
-
 This is the replication code for paper entitled 'Strengthened China's food security through air quality improvements'.
 
 This directory has three folds:
