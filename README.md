@@ -5,14 +5,14 @@ This directory has three folds:
 * /data, which stores the processed and original source data (not shown here because it is empty).
 * /figures, which stores the plotted figures from R scripts, but in their specific name.
 * /figures_paper, which stores the figures with indexed name.
-* /script, which contains the source R code to replicate the results, including processing, preparing, generating results. 
+* /script, which contains the source R code to replicate the results, including processing, preparing, and generating data and figures. 
 
 More details in script fold:
 
 * The prefix `load` is for loading packages, functions, and formulas.
 * The prefixes `cal_` and `make` demonstrate that they are used for pre-processing source data, for example, how to tidy gridded data to tabular data.
 The prefixes `results_` are for generating and plotting the results in Main text and Supporting Information.
-* `publish_figs.R` is for rename the figures to figures_paper.
+* `publish_figs.R` is for rename the figures in /figures to /figures_paper.
 * `tidy_shp.R` is for getting smaller shp files for plotting.
 * `tidy_all.R` is for bind the `cal_` data to one tidied dataset.
 
