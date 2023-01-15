@@ -22,7 +22,7 @@ The data in data/. are outputs from `results_` scripts.
 The data in data/outputs are outputs from `cal_` scripts.
 The data in data/inputs are source data acquired from different sources. Note that due to different data policy, the source data should be download by oneself.
 
-Note that the data fold is empty here due to its large volume. You can contact the authors for acquiring them, if you want.
+Note that the data fold is empty here due to its large volume. Please contact the authors for acquiring them (email: xliu21@smail.nju.edu.cn), if you want.
 
 ### R packages
 
