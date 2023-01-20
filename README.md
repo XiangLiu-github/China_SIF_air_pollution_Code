@@ -16,7 +16,7 @@ The prefixes `results_` are for generating and plotting the results in Main text
 * `tidy_shp.R` is for getting smaller shp files for plotting.
 * `tidy_all.R` is for bind the `cal_` data to one tidied dataset.
 
-More details in data folds:
+More details in data fold:
 
 The data in data/. are outputs from `results_` scripts.
 The data in data/outputs are outputs from `cal_` scripts.
