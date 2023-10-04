@@ -1,4 +1,4 @@
-# Replication Code for the Paper Titled "Enhancing China's Food Security Through Air Quality Improvements"
+# Replication Code for the Paper Titled "Strengthening China's food security through air quality improvements"
 
 This repository comprises three main directories:
 
