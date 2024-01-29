@@ -1,4 +1,4 @@
-# Replication Code for the Paper Titled "Air quality improvements can strengthen China's food security"
+# Replication Code for the Paper Titled "Air quality improvements can strengthen China's food security" in Nature Food
 
 This repository comprises three main directories:
 
