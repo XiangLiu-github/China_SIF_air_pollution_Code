@@ -34,6 +34,8 @@ The `/data/inputs` directory holds the source data acquired from various sources
 
 Please be aware that we have omitted the data files from this presentation due to their substantial size. If you require access to these files, please reach out to the authors at xliu21@smail.nju.edu.cn.
 
+We recommend downloading the source data and using the provided scripts for processing. However, you can also directly access the processed file, `tidied.qs` (1.57 GB), via the following link: [Download `tidied.qs`](https://hu-my.sharepoint.com/:u:/g/personal/xiangliu_fas_harvard_edu/ERxljDo-5NZAjIfmctwzBJoBNCbpFRz-RIlpH6QEMKXpIQ)
+
 ### R packages
 
 ```r
